@@ -1,0 +1,302 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #8e2de2, #f2a900);
+    color: white;
+    height: 100%;
+}
+
+/* Vídeo de fundo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    /* A opacidade foi ajustada para 0.3 para tornar o vídeo mais discreto */
+}
+
+/* Barra de navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Seção Home com título e texto */
+.hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+    max-width: 90%;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f2a900;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 15px;
+}
+
+/* Efeito de animação */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #f2a900;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #8e2de2;
+}
+
+/* Seção Planos */
+#planos {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.highlighted-title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #8e2de2, #f2a900);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+}
+
+/* Planos */
+.planos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+    /* Garantir que os planos sejam alinhados verticalmente */
+    width: 100%;
+}
+
+.plano {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    width: 40%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.plano h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.plano p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.plano .cta-btn {
+    font-size: 1.1rem;
+}
+
+/* Planos em destaque */
+.plano.destaque {
+    background: linear-gradient(to right, #8e2de2, #f2a900);
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plano.destaque:hover {
+    transform: scale(1.05);
+}
+
+/* Seção Sobre */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* WhatsApp */
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.whatsapp-btn img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    /* Ajuste na hero */
+    .hero {
+        height: 50vh;
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .planos-container {
+        flex-direction: column;
+        padding: 0 10px;
+        align-items: center;
+        /* Centraliza os planos na tela */
+        justify-content: center;
+        /* Garantir que os planos fiquem no centro */
+    }
+
+    .plano {
+        width: 90%;
+        /* Ajuste a largura para ocupar maior espaço em telas pequenas */
+        margin-bottom: 20px;
+    }
+
+    .highlighted-title {
+        font-size: 1.8rem;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes no WhatsApp */
+    #whatsapp {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    /* Ajustes na barra de navegação para dispositivos móveis */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+nav .logo img {
+    height: 150px;
+    /* Ajuste o tamanho conforme necessário */
+    width: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    /* Ajuste no tamanho do título para dispositivos móveis */
+    .hero-text h1 {
+        font-size: 1.4rem;
+        /* Tamanho menor para dispositivos móveis */
+    }
+
+    /* O restante das alterações de responsividade continuam aqui */
+}
