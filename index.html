@@ -6,26 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UNITV - Canais, Filmes e Séries. Assine agora!">
     <title>UNITV - Canais, Filmes e Séries</title>
+    <!-- Google Fonts otimizado -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Fonte para o Natal -->
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Vídeo de fundo -->
     <div class="video-background">
-        <video autoplay muted loop id="bg-video">
+        <video autoplay muted loop playsinline id="bg-video">
             <source src="./video/ss4.mp4" type="video/mp4">
-            Seu navegador não suporta o formato de vídeo.
+            Seu navegador não suporta vídeo.
         </video>
     </div>
 
     <!-- Barra de navegação -->
     <nav>
         <div class="logo">
-            <img src="./img/UNITV.png" alt="Logo UNITV">
+            <img src="./img/UNITV.png" alt="Logo UNITV" loading="lazy">
         </div>
         <ul>
             <li><a href="#planos">Planos</a></li>
@@ -33,14 +36,12 @@
         </ul>
     </nav>
 
-    <!-- Seção Home com título e texto -->
+    <!-- Seção Home -->
     <section id="home" class="hero">
         <div class="hero-text">
             <h1 class="animated-title">🎄 Natal Especial UNITV 🎄</h1>
             <p>Assine agora e tenha acesso aos melhores canais, filmes e séries para o seu Natal!</p>
-            <a target="_blank"
-                href="https://wa.me/5591981584866?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20plano%20UNITV."
-                class="cta-btn">Assine Agora</a>
+            <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20plano%20UNITV." target="_blank" class="cta-btn">Assine Agora</a>
         </div>
     </section>
 
@@ -51,37 +52,24 @@
             <div class="plano destaque">
                 <h3>Plano Mensal</h3>
                 <p>R$ 24,90 / mês</p>
-                <a target="_blank"
-                    href="https://wa.me/5591981584866?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20plano%20UNITV."
-                    class="cta-btn">Assinar</a>
+                <a href="https://wa.me/5591981584866?text=Quero%20saber%20mais%20sobre%20o%20plano%20mensal." target="_blank" class="cta-btn">Assinar</a>
             </div>
             <div class="plano destaque">
                 <h3>Plano Anual</h3>
                 <p>R$ 179,90 / ano</p>
-                <a target="_blank"
-                    href="https://wa.me/5591981584866?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20plano%20UNITV."
-                    class="cta-btn">Assinar</a>
+                <a href="https://wa.me/5591981584866?text=Quero%20saber%20mais%20sobre%20o%20plano%20anual." target="_blank" class="cta-btn">Assinar</a>
             </div>
         </div>
     </section>
 
-    <!-- Seção Sobre -->
-    <section id="sobre">
-        <h2>Sobre o UNITV</h2>
-        <p>O UNITV é um aplicativo completo para quem ama assistir canais, filmes e séries com qualidade. Tenha acesso a
-            um conteúdo exclusivo, sempre atualizado.</p>
-    </section>
-
-    <!-- WhatsApp -->
+    <!-- Seção WhatsApp -->
     <section id="whatsapp">
-        <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20plano%20UNITV."
-            target="_blank" class="whatsapp-btn">
-            <img src="./img/whatsapp.png" alt="WhatsApp" />
+        <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20mais%20informações." target="_blank" class="whatsapp-btn">
+            <img src="./img/whatsapp.png" alt="WhatsApp" loading="lazy">
             Fale Conosco
         </a>
     </section>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
