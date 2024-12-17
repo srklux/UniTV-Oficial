@@ -1,0 +1,13 @@
+# Cache para arquivos do site
+
+# CSS
+/style.css
+  Cache-Control: public, max-age=2592000
+
+# Imagens
+/img/*
+  Cache-Control: public, max-age=15552000
+
+# Vídeos
+/video/*
+  Cache-Control: public, max-age=31536000
