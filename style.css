@@ -8,11 +8,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    padding: 0;
-    margin: 0;
     background: linear-gradient(to right, #8e2de2, #f2a900);
     color: white;
-    height: 100%;
 }
 
 /* Vídeo de fundo */
@@ -31,179 +28,126 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.3;
-    /* A opacidade foi ajustada para 0.3 para tornar o vídeo mais discreto */
 }
 
 /* Barra de navegação */
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
 }
 
-nav .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+nav .logo img {
+    height: 120px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-}
-
-nav ul li {
-    margin: 0 10px;
+    list-style: none;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    margin: 0 10px;
     font-size: 1rem;
 }
 
-/* Seção Home com título e texto */
+/* Hero Section */
 .hero {
-    position: relative;
-    height: 35vh;  /* Diminuindo a altura da seção */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 35vh;
     background: rgba(0, 0, 0, 0.6);
 }
 
-.hero-text {
-    max-width: 90%;
-    text-align: center;
-}
-
 .hero-text h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #f2a900;
     font-family: 'Fredericka the Great', cursive;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 2s ease-in-out;
-    margin-bottom: 15px;
-}
-
-/* Efeito de animação */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    font-size: 3rem;
+    color: #f2a900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .cta-btn {
-    background-color: #f2a900;
+    display: inline-block;
     padding: 10px 20px;
-    font-size: 1.1rem;
-    text-decoration: none;
     color: white;
+    background: #f2a900;
     border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .cta-btn:hover {
-    background-color: #8e2de2;
+    background: #8e2de2;
 }
 
 /* Seção Planos */
 #planos {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 50px 20px;
 }
 
+
+/* Título com background-clip */
 .highlighted-title {
     font-size: 2rem;
-    font-weight: bold;
+    margin-bottom: 20px;
+
     background: linear-gradient(to right, #f5f5f5, #962ac9);
-    -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: text; /* Propriedade padrão */
+    -webkit-background-clip: text; /* Compatibilidade com Webkit */
     color: transparent;
-    margin-bottom: 30px;
 }
 
-/* Planos */
+
 .planos-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 30px;
-    align-items: center;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
 .plano {
     background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
     width: 40%;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    padding: 20px;
     text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-.plano h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.plano p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.plano .cta-btn {
-    font-size: 1.1rem;
-}
-
-/* Planos em destaque */
 .plano.destaque {
     background: linear-gradient(to right, #8e2de2, #f2a900);
-    color: white;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.plano.destaque:hover {
+.plano:hover {
     transform: scale(1.05);
 }
 
-/* Seção Sobre */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* WhatsApp */
-#whatsapp {
+/* Botão WhatsApp */
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 10;
-}
-
-.whatsapp-btn {
-    background-color: #25D366;
-    padding: 10px 20px;
+    background: #25D366;
     color: white;
     border-radius: 50px;
-    display: flex;
-    align-items: center;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .whatsapp-btn img {
@@ -212,70 +156,24 @@ section {
 }
 
 .whatsapp-btn:hover {
-    background-color: #128C7E;
-}
-nav .logo {
-    font-size: 1.8rem;
+    background: #128C7E;
 }
 
-/* Responsividade para dispositivos móveis */
+/* Responsividade */
 @media (max-width: 768px) {
-
-    /* Remover a nav bar e o WhatsApp no mobile */
     nav {
         display: none;
     }
 
-    .hero .logo {
-        position: absolute;
-        top: 10px; /* Ajusta a distância do topo */
-        left: 20px; /* Ajusta a distância da esquerda */
-        font-size: 1.2rem; /* Tamanho menor do logo no mobile */
-    }
-    /* Ajuste na hero */
     .hero {
-        height: 20vh;  /* Mantendo a altura reduzida também no mobile */
-        flex-direction: column;
+        height: 25vh;
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .cta-btn {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .planos-container {
-        flex-direction: column;
-        padding: 0 10px;
-        align-items: center;
-        justify-content: center;
+        font-size: 2rem;
     }
 
     .plano {
         width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .highlighted-title {
-        font-size: 1.8rem;
-    }
-
-    nav ul li {
-        margin: 0 5px;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-    }
-
-    .hero-text p {
-       display: none;
-    }
-
-    .hero-text h1 {
-        font-size: 1.2rem;  /* Ajuste fixo para o título */
     }
 }
