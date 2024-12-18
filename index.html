@@ -13,6 +13,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -28,7 +29,7 @@
     <!-- Barra de navegação -->
     <nav>
         <div class="logo">
-            <img src="./img/UNITV.png" alt="Logo UNITV" loading="lazy">
+            <img src="./img/UNITV.webp" alt="Logo UNITV" loading="lazy" width="120" height="auto">
         </div>
         <ul>
             <li><a href="#planos">Planos</a></li>
@@ -65,10 +66,26 @@
     <!-- Seção WhatsApp -->
     <section id="whatsapp">
         <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20mais%20informações." target="_blank" class="whatsapp-btn">
-            <img src="./img/whatsapp.png" alt="WhatsApp" loading="lazy">
+            <img src="./img/whatsapp.webp" alt="WhatsApp" width="50" height="50" loading="lazy">
             Fale Conosco
         </a>
     </section>
+
+    <!-- Registrar o Service Worker -->
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registrado com sucesso:', registration);
+          })
+          .catch((error) => {
+            console.log('Erro ao registrar o Service Worker:', error);
+          });
+      });
+    }
+  </script>
+  
 
 </body>
 
