@@ -97,18 +97,15 @@ nav ul li a {
     padding: 50px 20px;
 }
 
-
 /* Título com background-clip */
 .highlighted-title {
     font-size: 2rem;
     margin-bottom: 20px;
-
     background: linear-gradient(to right, #f5f5f5, #962ac9);
     background-clip: text; /* Propriedade padrão */
     -webkit-background-clip: text; /* Compatibilidade com Webkit */
     color: transparent;
 }
-
 
 .planos-container {
     display: flex;
