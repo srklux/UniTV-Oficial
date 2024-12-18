@@ -7,110 +7,95 @@
     <meta name="description" content="UNITV - Canais, Filmes e Séries. Assine agora!">
     <title>UNITV - Canais, Filmes e Séries</title>
 
-    <!-- Carregar fontes críticas de forma antecipada -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap" as="style" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap"
+        rel="stylesheet">
 
-    <!-- CSS (Inline Critical CSS) -->
-    <style>
-        /* Estilos críticos para a renderização inicial */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(to right, #8e2de2, #f2a900);
-            color: white;
-        }
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 35vh;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        .hero-text h1 {
-            font-family: 'Fredericka the Great', cursive;
-            font-size: 3rem;
-            color: #f2a900;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        /* ... outros estilos essenciais */
-    </style>
-
-    <!-- CSS adicional -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Vídeo de fundo -->
-    <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video" poster="img/fallback.jpg">
-            <source src="./video/ss4.mp4" type="video/mp4">
-            <source src="./video/ss4.webm" type="video/webm">
-            Seu navegador não suporta vídeo.
-        </video>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
     </div>
 
-    <!-- Barra de navegação -->
-    <nav>
-        <div class="logo">
-            <img src="./img/UNITV.webp" alt="Logo UNITV" loading="lazy" width="120" height="auto">
+    <!-- Conteúdo principal -->
+    <div id="content" style="display:none;">
+        <!-- Vídeo de fundo -->
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="./video/ss4.mp4" type="video/mp4">
+                <source src="./video/ss4.webm" type="video/webm">
+                Seu navegador não suporta vídeo.
+            </video>
         </div>
-        <ul>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#whatsapp">WhatsApp</a></li>
-        </ul>
-    </nav>
 
-    <!-- Seção Home -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1 class="animated-title">🎄 Natal Especial UNITV 🎄</h1>
-            <p>Assine agora e tenha acesso aos melhores canais, filmes e séries para o seu Natal!</p>
-            <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20plano%20UNITV." target="_blank" class="cta-btn">Assine Agora</a>
-        </div>
-    </section>
-
-    <!-- Seção Planos -->
-    <section id="planos">
-        <h2 class="highlighted-title">Escolha o Seu Plano</h2>
-        <div class="planos-container">
-            <div class="plano destaque">
-                <h3>Plano Mensal</h3>
-                <p>R$ 24,90 / mês</p>
-                <a href="https://wa.me/5591981584866?text=Quero%20saber%20mais%20sobre%20o%20plano%20mensal." target="_blank" class="cta-btn">Assinar</a>
+        <!-- Barra de navegação -->
+        <nav>
+            <div class="logo">
+                <img src="./img/UNITV.webp" alt="Logo UNITV" loading="lazy" width="120" height="auto">
             </div>
-            <div class="plano destaque">
-                <h3>Plano Anual</h3>
-                <p>R$ 179,90 / ano</p>
-                <a href="https://wa.me/5591981584866?text=Quero%20saber%20mais%20sobre%20o%20plano%20anual." target="_blank" class="cta-btn">Assinar</a>
+            <ul>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#whatsapp">WhatsApp</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seção Home -->
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1 class="animated-title">🎄 Natal Especial UNITV 🎄</h1>
+                <p>Assine agora e tenha acesso aos melhores canais, filmes e séries para o seu Natal!</p>
+                <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20plano%20UNITV."
+                    target="_blank" class="cta-btn">Assine Agora</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção WhatsApp -->
-    <section id="whatsapp">
-        <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20mais%20informações." target="_blank" class="whatsapp-btn">
-            <img src="./img/whatsapp.webp" alt="WhatsApp" width="50" height="50" loading="lazy">
-            Fale Conosco
-        </a>
-    </section>
+        <!-- Seção Planos -->
+        <section id="planos">
+            <h2 class="highlighted-title">Escolha o Seu Plano</h2>
+            <div class="planos-container">
+                <div class="plano destaque">
+                    <h3>Plano Mensal</h3>
+                    <p>R$ 24,90 / mês</p>
+                    <a href="https://wa.me/5591981584866?text=Quero%20saber%20mais%20sobre%20o%20plano%20mensal."
+                        target="_blank" class="cta-btn">Assinar</a>
+                </div>
+                <div class="plano destaque">
+                    <h3>Plano Anual</h3>
+                    <p>R$ 179,90 / ano</p>
+                    <a href="https://wa.me/5591981584866?text=Quero%20saber%20mais%20sobre%20o%20plano%20anual."
+                        target="_blank" class="cta-btn">Assinar</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Registrar o Service Worker -->
+        <!-- Seção WhatsApp -->
+        <section id="whatsapp">
+            <a href="https://wa.me/5591981584866?text=Olá!%20Quero%20mais%20informações." target="_blank"
+                class="whatsapp-btn">
+                <img src="./img/whatsapp.webp" alt="WhatsApp" width="50" height="50" loading="lazy">
+                Fale Conosco
+            </a>
+        </section>
+
+    </div>
+
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then((registration) => {
-                        console.log('Service Worker registrado com sucesso:', registration);
-                    })
-                    .catch((error) => {
-                        console.log('Erro ao registrar o Service Worker:', error);
-                    });
-            });
-        }
+        window.addEventListener('load', function () {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        });
     </script>
 
 </body>
