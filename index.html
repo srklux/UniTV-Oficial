@@ -6,22 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UNITV - Canais, Filmes e Séries. Assine agora!">
     <title>UNITV - Canais, Filmes e Séries</title>
-    <!-- Google Fonts otimizado -->
+
+    <!-- Carregar fontes críticas de forma antecipada -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap" as="style" crossorigin="anonymous">
 
-    <!-- CSS -->
+    <!-- CSS (Inline Critical CSS) -->
+    <style>
+        /* Estilos críticos para a renderização inicial */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #8e2de2, #f2a900);
+            color: white;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 35vh;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-text h1 {
+            font-family: 'Fredericka the Great', cursive;
+            font-size: 3rem;
+            color: #f2a900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        /* ... outros estilos essenciais */
+    </style>
+
+    <!-- CSS adicional -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
     <!-- Vídeo de fundo -->
     <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video">
+        <video autoplay muted loop playsinline id="bg-video" poster="img/fallback.jpg">
             <source src="./video/ss4.mp4" type="video/mp4">
+            <source src="./video/ss4.webm" type="video/webm">
             Seu navegador não suporta vídeo.
         </video>
     </div>
@@ -72,20 +99,19 @@
     </section>
 
     <!-- Registrar o Service Worker -->
-<script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-          .then((registration) => {
-            console.log('Service Worker registrado com sucesso:', registration);
-          })
-          .catch((error) => {
-            console.log('Erro ao registrar o Service Worker:', error);
-          });
-      });
-    }
-  </script>
-  
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registrado com sucesso:', registration);
+                    })
+                    .catch((error) => {
+                        console.log('Erro ao registrar o Service Worker:', error);
+                    });
+            });
+        }
+    </script>
 
 </body>
 
